@@ -1,0 +1,5 @@
+let a=[1, 2, 3 , 4 , 5,6];
+console.log(a[2]);
+for(i=1; i<=a.length; i++){
+    console.log(i);
+}
