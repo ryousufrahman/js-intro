@@ -20,3 +20,6 @@ console.log(du.department.social);
 
 du.faculty[2] = "humanities";
 console.log(du.faculty);
+delete du.department.art;
+console.log(du);
+
