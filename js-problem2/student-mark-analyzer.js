@@ -4,40 +4,32 @@ function analyzeMarks(marksObj){
      let average = 0;
      let highestmark = -Infinity;
     let lowestmark = Infinity;
+    let highestSubject ='';
+    let lowestSubject ='';
     for(let subject in marksObj){
         let mark = marksObj[subject];
         totalMark = totalMark +mark;
-       average = totalMark / Object.keys(marksObj).length;
-       if (mark>highestmark) {
-        highestmark = mark;
         
-       }
-       if(mark<lowestmark){
-        lowestmark = mark;
-       }
+        if(mark>highestmark){
+            highestmark = mark;
+            highestSubject = subject;
+        }
+        if(mark<lowestmark){
+            lowestmark = mark;
+            lowestSubject = subject;
+        }
+
     }
-
-    
-
-    
-
-
-
-   
-
-
+    average = totalMark / Object.keys(marksObj).length;
 
 
     return {
         
         totalMark,
         average,
-
-    }
-
-
-
-
+        highestSubject,
+        lowestSubject
+      }  
 
 }
 
